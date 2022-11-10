@@ -1,0 +1,244 @@
+
+/*
+    css file for One-page Landing Page design project, by Anders Eklöv (andiOak)
+*/
+
+html, body {
+    background-color: #222222;
+    color: #dddddd;
+    margin: 0; padding: 0;
+    font-family: Helvetica, Arial, sans-serif;
+    font-size: 16px; font-weight: 300; line-height: 1.5;
+}
+div, section { margin: 0; padding: 0; }
+
+p, span, ul, li, em, strong {
+    font-family: 'Mulish', sans-serif;
+    font-size: 1.05em;
+}
+#tagline { font-size: 2.2em; line-height: 2em; max-width: 700px; margin-left: auto; margin-right: auto; }
+ul  { padding: 0 0 12px 4px; margin: 7px 0 0 12px; }
+li  { padding: 0 0 0 5px; margin: 0 0 15px 0; line-height: 1.9em; }
+
+a       { color: #c1d6f9; }
+a:hover { color: #e0ecff; }
+
+.center { text-align: center; }
+h1, h2, h3, h4, h5, h6 {
+    font-family: 'Mulish', sans-serif;
+    font-weight: 700;
+}
+
+h1 { font-size: 1.5em; margin-top: 0; }
+h1#title { font-size: 3.6em; }
+h2 { font-size: 2em; }
+h3 { font-size: 1.4em; }
+h4 { font-size: 1.2em; }
+h5 { font-size: 1.05em; }
+h6 { font-size: 1em; }
+
+img, figure { width: 100%; max-width: 100%; margin: 0; padding: 0; }
+img         { margin-bottom: 14px; display: block; }
+
+section { width: 100%; clear: both; }
+
+#header {
+    line-height: 3.5em; padding: 0;
+    background-color: #130042;
+    overflow: hidden;
+}
+
+#header .logo-div {
+    width: 200px; height: 84px; margin-left: 50px;
+    float: left;
+}
+#header .logo-div img {
+    vertical-align: middle; margin: 28px 0 0;
+}
+
+#header nav { overflow: hidden; }
+#header nav, #header nav ul { margin: 0; }
+#header nav, #header nav li, #header nav li a {
+    padding-left: 20px; padding-right: 20px;
+    font-size: 1.6rem; text-transform: lowercase; text-decoration: none;
+}
+
+#header nav li { line-height: 84px; display: inline-block; float: right; }
+
+#footer nav, #footer nav li, #footer nav li a {
+    padding-left: 7px; padding-right: 7px;
+    font-size: 1.25rem; text-transform: lowercase; text-decoration: none;
+}
+
+#footer nav li { line-height: 34px; display: inline-block; }
+
+#top-content {
+    background-color: #763FFF;
+    padding: 60px 0 45px;
+}
+
+.container {
+    width: 92%; max-width: 1000px; margin: 0 auto;
+}
+
+.one_third { width: 33%; float: left; }
+.two_third { width: 66%; float: left; }
+
+.inner-padding-left-20px { padding-left: 20px; }
+.inner-padding-right-20px { padding-right: 20px; }
+
+.one_third img { margin-top: 30px; }
+
+.grid-container {
+    min-height: 300px;
+    width: 100%;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr;
+    grid-gap: 22px;
+}
+.grid-image { border-radius: 11px; }
+
+iframe { width: 100%; max-width: 740px; min-height: 28rem; }
+#about p { line-height: 2.1em; max-width: 740px; margin-left: auto; margin-right: auto; }
+
+.form-container {
+    background-color: rgba(10, 10, 10, 0.4);
+    color: #eeeeee;
+    font-size: 1.2em; line-height: 2.1em;
+    padding: 28px 4%;
+}
+
+#footer {
+    background-color: rgba(10, 10, 10, 0.4); color: #eeeeee;
+    padding-top: 40px; padding-bottom: 40px;
+}
+#footer p { line-height: 2.1em; }
+#footer a { color: #eee; }
+#footer a:hover { color: #fff; }
+
+
+/* form styles */
+
+#survey-form { margin-bottom: 0; }
+#survey-form .form-field { margin-bottom: 27px; }
+#survey-form .form-field fieldset { outline: none; border: none; padding: 0; }
+#survey-form .form-field .fieldFullSize { width: 100%; }
+
+#survey-form .fieldFullSize label           { margin-bottom: 15px; display: inline-block; }
+#survey-form .fieldFullSize .radiobutton    { margin-bottom: 17px; }
+#survey-form .fieldFullSize .checkbox       { margin-bottom: 15px; }
+
+label, legend { font-size: 1.06em; font-weight: 700; }
+#survey-form .fieldFullSize.radiobuttons label,
+#survey-form .fieldFullSize.checkboxes label {
+    font-size: inherit; font-weight: 300; display: inline; /* resets */
+}
+
+.form-field.checkboxes legend { margin-bottom: 12px; }
+.checkbox input, .radiobuttons input { margin-top: 10px; margin-left: 1px; margin-right: 12px; }
+.radio-buttons-legend { margin-bottom: 10px; }
+
+#survey-form .fieldFullSize input#name,
+#survey-form .fieldFullSize input#email,
+#survey-form .fieldFullSize input#number {
+    display: block; box-sizing: border-box;
+    width: 100%; line-height: 2.9em; padding: 0 15px 0;
+    outline: none; border: 1px solid #444; border-radius: 9px;
+}
+#survey-form .form-field select {
+    display: block; box-sizing: border-box;
+    width: 100%; padding: 12px 14px;
+    outline: none; border: 1px solid #444; border-radius: 9px;
+}
+
+#survey-form .form-field textarea {
+    display: block; box-sizing: border-box;
+    width: 100%; min-height: 190px; padding: 15px 13px 5px;
+    outline: none; border: 1px solid #444; border-radius: 9px;
+}
+
+#survey-form #submit {
+    background-color: #84267a; color: #fff;
+    border: 1px solid #b944fa; border-radius: 11px;
+    width: 100%; line-height: 3em; padding: 0 12px;
+    font-size: 1.12em; text-transform: uppercase;
+}
+
+/* spacers and helpers */
+
+.clear { clear: both; }
+
+.spacerHuge     { height: 43px; }
+.spacerLarge    { height: 23px; }
+.spacerMedium   { height: 17px; }
+.spacerSmall    { height: 12px; }
+
+.roundedImg12 { border-radius: 12px; }
+
+.boxShadowMedium {
+    box-shadow: 1px 3px 35px -1px rgba(0,0,0,0.69);
+    -webkit-box-shadow: 1px 3px 35px -1px rgba(0,0,0,0.69);
+    -moz-box-shadow: 1px 3px 35px -1px rgba(0,0,0,0.69);
+}
+
+.boxShadowSmall {
+    box-shadow: 1px 3px 20px -1px rgba(0,0,0,0.4);
+    -webkit-box-shadow: 1px 3px 20px -1px rgba(0,0,0,0.4);
+    -moz-box-shadow: 1px 3px 20px -1px rgba(0,0,0,0.4);
+}
+
+.linearGradientBg {
+    background: #405db4;
+    background: linear-gradient(30deg,#405db4 0%, #470092 80%);
+    background: -webkit-linear-gradient(20deg,#405db4 0%, #470092 80%);
+    background: -moz-linear-gradient(20deg,#405db4 0%, #470092 80%);
+}
+
+
+/* Responsive web design for mobile and smaller tablets */
+
+@media screen and (max-width: 825px) {
+
+    #header nav, #header nav li, #header nav li a {
+        padding-left: 13px; padding-right: 13px;
+        font-size: 1.4rem;
+    }
+
+}
+
+@media screen and (max-width: 720px) {
+
+    #header nav { width: 100%; margin: 0 auto 10px; clear: both; text-align: center; }
+    #header nav li, #header nav li a {
+        padding-left: 13px; padding-right: 13px;
+        font-size: 1.4rem; float: none;
+    }
+
+    #header .logo-div       { height: 50px; margin: 45px auto 0; float: none; }
+    #header .logo-div img   { margin: 28px 0 0; }
+
+}
+
+
+@media screen and (max-width: 600px) {
+
+    p { font-size: 1.18em; }
+    .one_third { width: 100%; float: none; margin-bottom: 50px; text-align: center; }
+    .two_third { width: 100%; float: none; }
+
+    .one_third img { display: none; }
+
+    .inner-padding-left-20px { padding-left: 0; }
+    .inner-padding-right-20px { padding-right: 0; }
+
+    .grid-container {
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr 1fr 1fr;
+        grid-gap: 22px;
+    }
+    .card { margin-bottom: 20px; }
+    .card h3 { font-size: 2.2em; margin-bottom: 14px; }
+    .card p { line-height: 2.1em; }
+
+}
