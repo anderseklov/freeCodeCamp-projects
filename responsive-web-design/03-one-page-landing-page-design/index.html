@@ -28,10 +28,9 @@
                     </div>
                     <nav id="nav-bar">
                         <ul>
-                            <li><a href="#contact">contact</a></li>
-                            <li><a href="#about">about</a></li>
-                            <li><a href="#services">Services</a></li>
-
+                            <li><a href="#contact" class="nav-link">contact</a></li>
+                            <li><a href="#about" class="nav-link">about</a></li>
+                            <li><a href="#services" class="nav-link">Services</a></li>
                         </ul>
                     </nav>
                 </header>
@@ -49,34 +48,34 @@
                 <div class="container center">
 
                     <p id="tagline">Overview of our services</p>
-                    <div class="grid-container">
+                    <div class="flex-container">
 
                       <div class="card">
                           <img
                             srcset="images/piano-repair-1x.jpg, images/piano-repair-2x.jpg 2x"
                             src="images/piano-repair-2x.jpg"
-                            alt="reparing piano parts" class="grid-image boxShadowSmall"  />
+                            alt="reparing piano parts" class="flex-image boxShadowSmall"  />
                           <h3>Replacing parts</h3>
-                          <p class="grid-text">Internal mechanical parts sometimes need replacements, due to wear or insensitive handling.</p>
+                          <p class="flex-text">Internal mechanical parts sometimes need replacements, due to wear or insensitive handling.</p>
                       </div>
 
                       <div class="card">
                           <img
                             srcset="images/piano-reconstruction-1x.jpg, images/piano-reconstruction-2x.jpg 2x"
                             src="images/piano-reconstruction-2x.jpg"
-                            alt="restoration of piano parts" class="grid-image boxShadowSmall"  />
+                            alt="restoration of piano parts" class="flex-image boxShadowSmall"  />
                           <h3>Reconstruction</h3>
-                          <p class="grid-text">If parts do not exist on the market for older models, we can reconstruct them maually from scratch.</p>
+                          <p class="flex-text">If parts do not exist on the market for older models, we can reconstruct them maually from scratch.</p>
                       </div>
 
                       <div class="card">
                           <img
                             srcset="images/piano-trimming-1x.jpg, images/piano-trimming-2x.jpg 2x"
                             src="images/piano-trimming-2x.jpg"
-                            alt="tuning and trimming of piano parts" class="grid-image boxShadowSmall"  />
+                            alt="tuning and trimming of piano parts" class="flex-image boxShadowSmall"  />
 
                           <h3>Tuning & Trimming</h3>
-                          <p class="grid-text">Sometimes all it takes is a few tune-ups of functioning parts to make the machinery fleurish once more.</p>
+                          <p class="flex-text">Sometimes all it takes is a few tune-ups of functioning parts to make the machinery fleurish once more.</p>
                       </div>
 
                     </div>
@@ -123,7 +122,7 @@
                     <div class="two_third">
                         <div class="inner-padding-left-20px">
                             <div class="form-container roundedImg12">
-                                <form id="survey-form" action="https://www.freecodecamp.com/email-submit" method="post">
+                                <form id="form" action="https://www.freecodecamp.com/email-submit" method="post">
 
                                     <div class="form-field fieldFullSize clear">
                                         <label for="name" id="name-label">Your name: </label>
@@ -140,7 +139,7 @@
                                         <textarea id="feedback" name="feedback"></textarea>
                                     </div>
 
-                                    <input type="submit" id="submit" value="SUBMIT MY SURVEY" />
+                                    <input type="submit" id="submit" value="SEND MESSAGE" />
                                 </form>
                             </div>
                         </div>
@@ -153,6 +152,7 @@
 
             <section id="footer" class="center">
                 <div class="container">
+                    <div class="spacerMedium clear"></div>
                     <nav id="footer-nav">
                         <ul>
                             <li><a href="#">terms & privacy</a></li>
@@ -160,6 +160,7 @@
                             <li><a href="#contact">contact</a></li>
                         </ul>
                     </nav>
+                    <div class="spacerSmall clear"></div>
                     <p>Page designed for a fictional company by Anders Eklöv, as an assignemnt in freCodeCamp.org's course "Responsive Web Design".</a>
                     </p>
                 </div>
