@@ -43,7 +43,8 @@ img         { margin-bottom: 14px; display: block; }
 section { width: 100%; clear: both; }
 
 #header {
-    line-height: 3.5em; padding: 0;
+    position: fixed; top: 0; width: 100%;
+    line-height: 3.5em; padding: 4px 0 0;
     background-color: #130042;
     overflow: hidden;
 }
@@ -67,14 +68,14 @@ section { width: 100%; clear: both; }
 
 #footer nav, #footer nav li, #footer nav li a {
     padding-left: 7px; padding-right: 7px;
-    font-size: 1.25rem; text-transform: lowercase; text-decoration: none;
+    font-size: 1.13em; text-transform: lowercase; text-decoration: none;
 }
 
 #footer nav li { line-height: 34px; display: inline-block; }
 
 #top-content {
     background-color: #763FFF;
-    padding: 60px 0 45px;
+    padding: 150px 0 45px; /* extra padding on top to compensate for the sticky header */
 }
 
 .container {
@@ -89,15 +90,19 @@ section { width: 100%; clear: both; }
 
 .one_third img { margin-top: 30px; }
 
-.grid-container {
+.flex-container {
     min-height: 300px;
     width: 100%;
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
-    grid-template-rows: 1fr;
-    grid-gap: 22px;
+    display: flex; flex-direction: row;
 }
-.grid-image { border-radius: 11px; }
+
+.card {
+  width: 30%;
+  margin: auto;  /* Magic! */
+  /* margin-bottom: 20px; */
+}
+
+.flex-image { border-radius: 11px; }
 
 iframe { width: 100%; max-width: 740px; min-height: 28rem; }
 #about p { line-height: 2.1em; max-width: 740px; margin-left: auto; margin-right: auto; }
@@ -113,25 +118,25 @@ iframe { width: 100%; max-width: 740px; min-height: 28rem; }
     background-color: rgba(10, 10, 10, 0.4); color: #eeeeee;
     padding-top: 40px; padding-bottom: 40px;
 }
-#footer p { line-height: 2.1em; }
+#footer p { line-height: 2.1em; max-width: 575px; margin-left: auto; margin-right: auto; }
 #footer a { color: #eee; }
 #footer a:hover { color: #fff; }
 
 
 /* form styles */
 
-#survey-form { margin-bottom: 0; }
-#survey-form .form-field { margin-bottom: 27px; }
-#survey-form .form-field fieldset { outline: none; border: none; padding: 0; }
-#survey-form .form-field .fieldFullSize { width: 100%; }
+#form { margin-bottom: 0; }
+#form .form-field { margin-bottom: 27px; }
+#form .form-field fieldset { outline: none; border: none; padding: 0; }
+#form .form-field .fieldFullSize { width: 100%; }
 
-#survey-form .fieldFullSize label           { margin-bottom: 15px; display: inline-block; }
-#survey-form .fieldFullSize .radiobutton    { margin-bottom: 17px; }
-#survey-form .fieldFullSize .checkbox       { margin-bottom: 15px; }
+#form .fieldFullSize label           { margin-bottom: 15px; display: inline-block; }
+#form .fieldFullSize .radiobutton    { margin-bottom: 17px; }
+#form .fieldFullSize .checkbox       { margin-bottom: 15px; }
 
 label, legend { font-size: 1.06em; font-weight: 700; }
-#survey-form .fieldFullSize.radiobuttons label,
-#survey-form .fieldFullSize.checkboxes label {
+#form .fieldFullSize.radiobuttons label,
+#form .fieldFullSize.checkboxes label {
     font-size: inherit; font-weight: 300; display: inline; /* resets */
 }
 
@@ -139,26 +144,26 @@ label, legend { font-size: 1.06em; font-weight: 700; }
 .checkbox input, .radiobuttons input { margin-top: 10px; margin-left: 1px; margin-right: 12px; }
 .radio-buttons-legend { margin-bottom: 10px; }
 
-#survey-form .fieldFullSize input#name,
-#survey-form .fieldFullSize input#email,
-#survey-form .fieldFullSize input#number {
+#form .fieldFullSize input#name,
+#form .fieldFullSize input#email,
+#form .fieldFullSize input#number {
     display: block; box-sizing: border-box;
     width: 100%; line-height: 2.9em; padding: 0 15px 0;
     outline: none; border: 1px solid #444; border-radius: 9px;
 }
-#survey-form .form-field select {
+#form .form-field select {
     display: block; box-sizing: border-box;
     width: 100%; padding: 12px 14px;
     outline: none; border: 1px solid #444; border-radius: 9px;
 }
 
-#survey-form .form-field textarea {
+#form .form-field textarea {
     display: block; box-sizing: border-box;
     width: 100%; min-height: 190px; padding: 15px 13px 5px;
     outline: none; border: 1px solid #444; border-radius: 9px;
 }
 
-#survey-form #submit {
+#form #submit {
     background-color: #84267a; color: #fff;
     border: 1px solid #b944fa; border-radius: 11px;
     width: 100%; line-height: 3em; padding: 0 12px;
@@ -173,6 +178,7 @@ label, legend { font-size: 1.06em; font-weight: 700; }
 .spacerLarge    { height: 23px; }
 .spacerMedium   { height: 17px; }
 .spacerSmall    { height: 12px; }
+.spacerMini     { height: 8px; }
 
 .roundedImg12 { border-radius: 12px; }
 
@@ -198,19 +204,37 @@ label, legend { font-size: 1.06em; font-weight: 700; }
 
 /* Responsive web design for mobile and smaller tablets */
 
-@media screen and (max-width: 825px) {
+@media screen and (max-width: 845px) {
 
     #header nav, #header nav li, #header nav li a {
         padding-left: 13px; padding-right: 13px;
         font-size: 1.4rem;
     }
 
+    /* flex-box at smaller sizes - goes fullsize */
+    .flex-container { flex-direction: column; }
+    .card       { margin: 0 0 48px; width: 100%; }
+    .card h3    { font-size: 2.2em; margin-bottom: 14px; }
+    .card p     { line-height: 2.1em; }
+
+    p { font-size: 1.3em; }
+    #footer p { font-size: 1.15em; }
+    .one_third { width: 100%; float: none; margin-bottom: 50px; text-align: center; }
+    .two_third { width: 100%; float: none; }
+
+    .one_third p { max-width: 620px; margin-left: auto; margin-right: auto; }
+    .one_third img { display: none; }
+
+    .inner-padding-left-20px { padding-left: 0; }
+    .inner-padding-right-20px { padding-right: 0; }
+
 }
 
 @media screen and (max-width: 720px) {
 
-    #header nav     { width: 100%; margin: 0 auto 10px; clear: both; text-align: center; }
-    #header nav ul  { padding: 0; margin: 7px 0 0 0; }
+    #header nav { width: 100%; margin: 0 auto 10px; clear: both; text-align: center; box-sizing: border-box; }
+    #header nav ul { padding: 0; margin: 7px 0 0 0; }
+    #footer nav ul { padding: 0; margin: 0; }
     #header nav li, #header nav li a {
         padding-left: 13px; padding-right: 13px;
         font-size: 1.4rem; float: none;
@@ -219,27 +243,6 @@ label, legend { font-size: 1.06em; font-weight: 700; }
     #header .logo-div       { height: 50px; margin: 45px auto 0; float: none; }
     #header .logo-div img   { margin: 28px 0 0; }
 
-}
-
-
-@media screen and (max-width: 600px) {
-
-    p { font-size: 1.18em; }
-    .one_third { width: 100%; float: none; margin-bottom: 50px; text-align: center; }
-    .two_third { width: 100%; float: none; }
-
-    .one_third img { display: none; }
-
-    .inner-padding-left-20px { padding-left: 0; }
-    .inner-padding-right-20px { padding-right: 0; }
-
-    .grid-container {
-        grid-template-columns: 1fr;
-        grid-template-rows: 1fr 1fr 1fr;
-        grid-gap: 22px;
-    }
-    .card { margin-bottom: 20px; }
-    .card h3 { font-size: 2.2em; margin-bottom: 14px; }
-    .card p { line-height: 2.1em; }
+    #top-content { padding-top: 283px; } /* extra padding on top to compensate for the sticky header, larger here on mobile */
 
 }
