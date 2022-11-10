@@ -14,7 +14,7 @@ div, section { margin: 0; padding: 0; }
 
 p, span, ul, li, em, strong {
     font-family: 'Mulish', sans-serif;
-    font-size: 1.05em;
+    font-size: 1.1em; line-height: 1.8;
 }
 #tagline { font-size: 2.2em; line-height: 2em; max-width: 700px; margin-left: auto; margin-right: auto; }
 ul  { padding: 0 0 12px 4px; margin: 7px 0 0 12px; }
@@ -72,6 +72,7 @@ section { width: 100%; clear: both; }
 }
 
 #footer nav li { line-height: 34px; display: inline-block; }
+#footer nav li a { font-size: 1em; }
 
 #top-content {
     background-color: #763FFF;
@@ -118,7 +119,7 @@ iframe { width: 100%; max-width: 740px; min-height: 28rem; }
     background-color: rgba(10, 10, 10, 0.4); color: #eeeeee;
     padding-top: 40px; padding-bottom: 40px;
 }
-#footer p { line-height: 2.1em; max-width: 575px; margin-left: auto; margin-right: auto; }
+#footer p { line-height: 2.1em; font-size: 0.95em; max-width: 575px; margin-left: auto; margin-right: auto;  }
 #footer a { color: #eee; }
 #footer a:hover { color: #fff; }
 
@@ -126,6 +127,7 @@ iframe { width: 100%; max-width: 740px; min-height: 28rem; }
 /* form styles */
 
 #form { margin-bottom: 0; }
+#form input, #form textarea { font-size: 0.92em; }
 #form .form-field { margin-bottom: 27px; }
 #form .form-field fieldset { outline: none; border: none; padding: 0; }
 #form .form-field .fieldFullSize { width: 100%; }
@@ -134,7 +136,7 @@ iframe { width: 100%; max-width: 740px; min-height: 28rem; }
 #form .fieldFullSize .radiobutton    { margin-bottom: 17px; }
 #form .fieldFullSize .checkbox       { margin-bottom: 15px; }
 
-label, legend { font-size: 1.06em; font-weight: 700; }
+label, legend { font-weight: 700; }
 #form .fieldFullSize.radiobuttons label,
 #form .fieldFullSize.checkboxes label {
     font-size: inherit; font-weight: 300; display: inline; /* resets */
@@ -164,10 +166,10 @@ label, legend { font-size: 1.06em; font-weight: 700; }
 }
 
 #form #submit {
-    background-color: #84267a; color: #fff;
-    border: 1px solid #b944fa; border-radius: 11px;
+    background-color: #F2B100; color: #fff;
+    border: 3px solid #FFD66D; border-radius: 11px;
     width: 100%; line-height: 3em; padding: 0 12px;
-    font-size: 1.12em; text-transform: uppercase;
+    font-size: 1.05em; font-weight: 700; text-transform: uppercase;
 }
 
 /* spacers and helpers */
@@ -211,14 +213,16 @@ label, legend { font-size: 1.06em; font-weight: 700; }
         font-size: 1.4rem;
     }
 
+    h1#title { font-size: 2.6em; }
+    #tagline { font-size: 2em; }
+
     /* flex-box at smaller sizes - goes fullsize */
     .flex-container { flex-direction: column; }
     .card       { margin: 0 0 48px; width: 100%; }
     .card h3    { font-size: 2.2em; margin-bottom: 14px; }
     .card p     { line-height: 2.1em; }
 
-    p { font-size: 1.3em; }
-    #footer p { font-size: 1.15em; }
+    #footer p { font-size: 0.97em; }
     .one_third { width: 100%; float: none; margin-bottom: 50px; text-align: center; }
     .two_third { width: 100%; float: none; }
 
@@ -239,10 +243,11 @@ label, legend { font-size: 1.06em; font-weight: 700; }
         padding-left: 13px; padding-right: 13px;
         font-size: 1.4rem; float: none;
     }
+    #header nav li { line-height: 28px; }
 
-    #header .logo-div       { height: 50px; margin: 45px auto 0; float: none; }
-    #header .logo-div img   { margin: 28px 0 0; }
+    #header .logo-div       { height: inherit; margin: 28px auto 0; float: none; }
+    #header .logo-div img   { margin: 10px 0 0; }
 
-    #top-content { padding-top: 283px; } /* extra padding on top to compensate for the sticky header, larger here on mobile */
+    #top-content { padding-top: 182px; } /* extra padding on top to compensate for the sticky header, larger here on mobile */
 
 }
