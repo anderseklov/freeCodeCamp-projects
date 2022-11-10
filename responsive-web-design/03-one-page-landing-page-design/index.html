@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+    <head>
+        <meta charset="utf-8">
+        <title>Landing Page Project - by Anders Eklöv</title>
+        <!-- for these projects I omitted the SEO meta tags and lots of other tags used to optimize loading -->
+
+        <!-- preconnects for speed -->
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+        <!-- custom Google Fonts -->
+        <link href="https://fonts.googleapis.com/css2?family=Mulish:wght@300;700&display=swap" rel="stylesheet">
+
+        <link rel="stylesheet" href="styles.css">
+    </head>
+    <body class="linearGradientBg">
+
+        <main id="main">
+
+            <section>
+                <header id="header">
+                    <div class="logo-div">
+                        <img
+                          srcset="logo-1x-cut.png, logo-2x-cut.png 2x"
+                          src="logo-2x-cut.png"
+                          alt="logo of the company" id="header-img" />
+                    </div>
+                    <nav id="nav-bar">
+                        <ul>
+                            <li><a href="#contact">contact</a></li>
+                            <li><a href="#about">about</a></li>
+                            <li><a href="#services">Services</a></li>
+
+                        </ul>
+                    </nav>
+                </header>
+            </section>
+
+            <section id="top-content">
+                <div class="container center">
+                    <h1 id="title">Piano Technicians</h1>
+                    <p id="tagline">Over 80 years of experience in customized repairs of uprights and grand pianos.</p>
+                    <p style="color: E4BB9C;"><em>based in fairy-land</em></p>
+                </div>
+            </section>
+
+            <section id="services">
+                <div class="container center">
+
+                    <p id="tagline">Overview of our services</p>
+                    <div class="grid-container">
+
+                      <div class="card">
+                          <img
+                            srcset="piano-repair-1x.jpg, piano-repair-2x.jpg 2x"
+                            src="piano-repair-2x.jpg"
+                            alt="reparing piano parts" class="grid-image boxShadowSmall"  />
+                          <h3>Replacing parts</h3>
+                          <p class="grid-text">Internal mechanical parts sometimes need replacements, due to wear or insensitive handling.</p>
+                      </div>
+
+                      <div class="card">
+                          <img
+                            srcset="piano-reconstruction-1x.jpg, piano-reconstruction-2x.jpg 2x"
+                            src="piano-reconstruction-2x.jpg"
+                            alt="restoration of piano parts" class="grid-image boxShadowSmall"  />
+                          <h3>Reconstruction</h3>
+                          <p class="grid-text">If parts do not exist on the market for older models, we can reconstruct them maually from scratch.</p>
+                      </div>
+
+                      <div class="card">
+                          <img
+                            srcset="piano-trimming-1x.jpg, piano-trimming-2x.jpg 2x"
+                            src="piano-trimming-2x.jpg"
+                            alt="tuning and trimming of piano parts" class="grid-image boxShadowSmall"  />
+
+                          <h3>Tuning & Trimming</h3>
+                          <p class="grid-text">Sometimes all it takes is a few tune-ups of functioning parts to make the machinery fleurish once more.</p>
+                      </div>
+
+                    </div>
+
+                    <div class="spacerHuge clear"></div>
+                    <div class="spacerLarge"></div>
+
+                </div>
+            </section>
+
+            <section id="about">
+                <div class="container center">
+                    <h2 id="title">Watch video of our work</h2>
+                    <div class="spacerMedium"></div>
+                    <iframe id="video" src="https://www.youtube.com/embed/qCB_etJLVMs" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                    <p>
+                        We have over 80 years of collective experience in working with all kinds of pianos.
+                        From old Steinway, Yamaha, Fazioli or Bechstein Grand pianos, to the more average
+                        upright pianos in your standard living room.
+                    </p>
+                </div>
+                <div class="spacerHuge"></div>
+            </section>
+
+
+
+            <section id="contact">
+                <div class="spacerLarge"></div>
+                <div class="container">
+
+                    <div class="one_third">
+
+                        <div class="inner-padding-right-20px">
+                            <h2>contact us</h2>
+                            <p>Write us a line or two about what your piano
+                                needs and we'll get back to you with our advice and solutions.
+                            </p>
+                            <img src="write-or-contact-image.jpg" alt="image of a person writing a letter" class="roundedImg12" />
+
+                        </div>
+
+                    </div>
+
+                    <div class="two_third">
+                        <div class="inner-padding-left-20px">
+                            <div class="form-container roundedImg12">
+                                <form id="survey-form" action="https://www.freecodecamp.com/email-submit" method="post">
+
+                                    <div class="form-field fieldFullSize clear">
+                                        <label for="name" id="name-label">Your name: </label>
+                                        <input type="text" name="name" id="name" value="" required="required" placeholder="enter your name...">
+                                    </div>
+
+                                    <div class="form-field fieldFullSize clear">
+                                        <label for="email" id="email-label">Your email: </label>
+                                        <input type="email" name="email" id="email" value="" required="required" placeholder="ie. example@somesite.com">
+                                    </div>
+
+                                    <div class="form-field fieldFullSize clear">
+                                        <label for="feedback">message:</label>
+                                        <textarea id="feedback" name="feedback"></textarea>
+                                    </div>
+
+                                    <input type="submit" id="submit" value="SUBMIT MY SURVEY" />
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="spacerHuge clear"></div>
+                </div>
+            </section>
+
+            <section id="footer" class="center">
+                <div class="container">
+                    <nav id="footer-nav">
+                        <ul>
+                            <li><a href="#">terms & privacy</a></li>
+                            <li><a href="#about">about</a></li>
+                            <li><a href="#contact">contact</a></li>
+                        </ul>
+                    </nav>
+                    <p>Page designed for a fictional company by Anders Eklöv, as an assignemnt in freCodeCamp.org's course "Responsive Web Design".</a>
+                    </p>
+                </div>
+            </section>
+
+        </main>
+    </body>
+</html>
