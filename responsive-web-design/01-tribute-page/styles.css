@@ -1,0 +1,82 @@
+
+/*
+    css file for Tribute Page project, by Anders Eklöv (andiOak)
+*/
+
+html, body {
+    background-color: #222222;
+    color: #dddddd;
+    margin: 0; padding: 0;
+    font-family: Helvetica, Arial, sans-serif;
+    font-size: 12px;
+}
+div, section { margin: 0; padding: 0; }
+
+p, span, ul, li, em, strong {
+    font-family: 'Source Serif Pro', serif;
+    font-size: 1.05em;
+}
+
+ul   { padding: 0 0 12px 4px; margin: 7px 0 0 12px; }
+li   { padding: 0 0 0 5px; margin: 0 0 15px 0; line-height: 1.9em; }
+
+a { color: #c1d6f9; }
+a:hover { color: #e0ecff; }
+
+.center { text-align: center; }
+h1, h2, h3, h4, h5, h6 {
+    font-family: 'Roboto Mono', monospace;
+}
+
+h1 { font-size: 1.5em; }
+h1#title { font-size: 3.2em; }
+h2 { font-size: 1.3em; }
+h3 { font-size: 1.18em; }
+h4 { font-size: 1.09em; }
+h5 { font-size: 1.05em; }
+h6 { font-size: 1em; }
+
+img, figure { width: 100%; max-width: 100%; margin: 0; padding: 0; }
+img         { margin-bottom: 14px; display: block; }
+figcaption  { font-size: 0.96em; text-align: center; }
+
+section     { width: 100%; }
+#header     { padding-top: 60px; padding-bottom: 40px; }
+.container  { width: 92%; max-width: 600px; margin: 0 auto; }
+
+.link-to-more {
+    background-color: rgba(10, 10, 10, 0.4); color: #eeeeee;
+    font-size: 1.2em; line-height: 2.1em;
+    padding: 14px 4%;
+}
+
+
+#footer {
+    background-color: #444444;
+    padding-top: 40px; padding-bottom: 40px;
+}
+#footer p { line-height: 2.1em; }
+#footer a { color: #eee; }
+#footer a:hover { color: #fff; }
+
+
+/* spacers and helpers */
+
+.spacerLarge    { height: 23px; }
+.spacerMedium   { height: 17px; }
+.spacerSmall    { height: 12px; }
+
+.roundedImg12   { border-radius: 12px; }
+
+.boxShadowMedium {
+    box-shadow: 1px 3px 35px -1px rgba(0,0,0,0.69);
+    -webkit-box-shadow: 1px 3px 35px -1px rgba(0,0,0,0.69);
+    -moz-box-shadow: 1px 3px 35px -1px rgba(0,0,0,0.69);
+}
+
+.linearGradientBg {
+    background: #2f2620;
+    background: linear-gradient(90deg,#2f2620 0%, #5a443c 40%, #3e2e28 80%);
+    background: -webkit-linear-gradient(90deg,#2f2620 0%, #5a443c 40%, #3e2e28 80%);
+    background: -moz-linear-gradient(90deg,#2f2620 0%, #5a443c 40%, #3e2e28 80%);
+}
