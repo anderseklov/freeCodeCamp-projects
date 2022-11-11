@@ -1,0 +1,183 @@
+
+/*
+    css file for One-page Landing Page design project, by Anders Eklöv (andiOak)
+*/
+
+html, body {
+    background-color: #222222;
+    color: #dddddd;
+    margin: 0; padding: 0;
+    font-family: Helvetica, Arial, sans-serif;
+    font-size: 16px; font-weight: 300; line-height: 1.5;
+    scroll-behavior: smooth;
+}
+div, section { margin: 0; padding: 0; }
+
+section {
+    padding-top: 40px;
+    padding-bottom: 45px;
+}
+p, span, ul, li, em, strong {
+    font-family: 'Mulish', sans-serif;
+    font-size: 1em; line-height: 1.8;
+}
+.lead { font-size: 1.15em; line-height: 1.9em; }
+ul  { padding: 0 0 12px 4px; margin: 7px 0 0 12px; }
+li  { padding: 0 0 0 5px; margin: 0 0 15px 0; line-height: 1.9em; }
+
+a       { color: #c1d6f9; }
+a:hover { color: #e0ecff; }
+
+.center { text-align: center; }
+h1, h2, h3, h4, h5, h6 {
+    font-family: 'Mulish', sans-serif;
+    font-weight: 700;
+}
+
+h1 { font-size: 1.7em; margin-top: 0; }
+h1#title { font-size: 2.4em; }
+h2 { font-size: 1.5em; }
+h3 { font-size: 1.3em; }
+h4 { font-size: 1.2em; }
+h5 { font-size: 1.05em; }
+h6 { font-size: 1em; }
+
+img, figure { width: 100%; max-width: 100%; margin: 0; padding: 0; }
+img         { margin-bottom: 14px; display: block; }
+
+section { width: 100%; clear: both; }
+
+#header {
+    position: fixed; top: 0; width: 100%;
+    padding: 10px; box-sizing: border-box;
+    background-color: #141E37;
+    overflow: hidden;
+}
+
+#header .logo-div {
+    width: 136px; height: 39px; margin-left: 25px;
+    float: left;
+    z-index: 500;
+}
+#header .logo-div img { margin: 0; }
+
+#header nav { overflow: hidden; }
+#header nav, #header nav ul { margin: 0; padding: 0; }
+#header nav { padding-left: 20px; padding-right: 20px; }
+
+#header nav li { margin: 0; line-height: 34px; display: inline-block; float: right; }
+#header nav li a { padding: 5px 10px; text-decoration: none; }
+
+#footer nav, #footer nav li, #footer nav li a {
+    padding-left: 7px; padding-right: 7px;
+    font-size: 1.13em; text-transform: lowercase; text-decoration: none;
+}
+
+#footer nav li { line-height: 34px; display: inline-block; }
+#footer nav li a { font-size: 1em; }
+
+#top-content {
+    background-color: #763FFF;
+}
+
+.one_third { width: 36%;  }
+.two_third { width: 64%;  }
+
+.inner-padding-left-20px { padding-left: 20px; }
+.inner-padding-right-20px { padding-right: 20px; }
+
+
+.sticky_sidebar_nav { position: fixed;  } /* top: 0; left: 0; */
+
+    .sticky_sidebar_nav_container {
+        width: 92%; max-width: 378px; float: right;
+    }
+
+.main_content {
+    margin-left: 36%; z-index: 200;
+}
+
+    .main_container {
+        width: 92%; max-width: 790px; margin: 0; float: left;
+    }
+
+    .sub-section { padding-top: 40px; }
+
+
+.container {
+    width: 92%; max-width: 1170px; margin: 0 auto;
+}
+
+pre     { padding: 20px 22px; background-color: #222; color: #ddd; border: 1px solid #444; border-radius: 11px; }
+code    { padding: 3px 6px; background-color: #222; color: #ddd; }
+
+.one_third img { margin-top: 30px; }
+
+.flex-container {
+    min-height: 300px;
+    width: 100%;
+    display: flex; flex-direction: row;
+}
+
+.card {
+  width: 30%;
+  margin: auto;  /* Magic! */
+  /* margin-bottom: 20px; */
+}
+
+.flex-image { border-radius: 11px; }
+
+#footer {
+    background-color: rgba(10, 10, 10, 0.4); color: #eeeeee;
+    padding-top: 40px; padding-bottom: 40px;
+}
+#footer p { line-height: 2.1em; font-size: 0.95em; max-width: 575px; margin-left: auto; margin-right: auto;  }
+#footer a { color: #eee; }
+#footer a:hover { color: #fff; }
+
+
+/* spacers and helpers */
+
+.clear { clear: both; }
+
+.spacerHuge     { height: 43px; }
+.spacerLarge    { height: 23px; }
+.spacerMedium   { height: 17px; }
+.spacerSmall    { height: 12px; }
+.spacerMini     { height: 8px; }
+
+.roundedImg12 { border-radius: 12px; }
+
+.boxShadowMedium {
+    box-shadow: 1px 3px 35px -1px rgba(0,0,0,0.69);
+    -webkit-box-shadow: 1px 3px 35px -1px rgba(0,0,0,0.69);
+    -moz-box-shadow: 1px 3px 35px -1px rgba(0,0,0,0.69);
+}
+
+.boxShadowSmall {
+    box-shadow: 1px 3px 20px -1px rgba(0,0,0,0.4);
+    -webkit-box-shadow: 1px 3px 20px -1px rgba(0,0,0,0.4);
+    -moz-box-shadow: 1px 3px 20px -1px rgba(0,0,0,0.4);
+}
+
+.linearGradientBg {
+    background: #405db4;
+    background: linear-gradient(30deg,#405db4 0%, #470092 80%);
+    background: -webkit-linear-gradient(20deg,#405db4 0%, #470092 80%);
+    background: -moz-linear-gradient(20deg,#405db4 0%, #470092 80%);
+}
+
+
+/* Responsive web design for mobile and smaller tablets */
+
+@media screen and (max-width: 845px) {
+
+
+
+}
+
+@media screen and (max-width: 720px) {
+
+
+
+}
