@@ -122,7 +122,20 @@ section { width: 100%; clear: both; }
     width: 92%; max-width: 1170px; margin: 0 auto;
 }
 
-pre     { padding: 20px 22px; background-color: #222; color: #ddd; border: 1px solid #444; border-radius: 11px; }
+.code-wrapper {
+    padding: 20px 22px;
+    background-color: #222; color: #ddd;
+    border: 1px solid #444; border-radius: 11px;
+}
+
+.code-wrapper pre {
+    overflow-x: scroll;
+    margin: 0; padding: 0 0 13px; border: none; 
+}
+
+pre {
+
+    background-color: #222; color: #ddd; border: 1px solid #444; border-radius: 11px; }
 code    { padding: 3px 6px; background-color: #222; color: #ddd; }
 
 .one_third img { margin-top: 30px; }
