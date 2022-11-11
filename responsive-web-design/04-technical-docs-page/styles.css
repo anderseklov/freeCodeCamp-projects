@@ -76,6 +76,8 @@ section { width: 100%; clear: both; }
 #footer nav li { line-height: 34px; display: inline-block; }
 #footer nav li a { font-size: 1em; }
 
+#header nav#nav-bar-mobile { display: none; }
+
 #top-content {
     background-color: #763FFF;
 }
@@ -83,22 +85,34 @@ section { width: 100%; clear: both; }
 .one_third { width: 36%;  }
 .two_third { width: 64%;  }
 
-.inner-padding-left-20px { padding-left: 20px; }
-.inner-padding-right-20px { padding-right: 20px; }
 
+.sticky_sidebar_nav { /* main outer wrapper of the nav sidebar */
 
-.sticky_sidebar_nav { position: fixed;  } /* top: 0; left: 0; */
+    position: fixed;
+    top: 114px; left: 0px;
+    bottom: 0px; /* you need to fix it to the outer parts or scrolling wont work */
+    overflow-y: scroll; overflow-x: hidden;
+    z-index: 200;
+}
 
     .sticky_sidebar_nav_container {
-        width: 92%; max-width: 378px; float: right;
+        width: 92%; max-width: 353px; float: right;
     }
+
+
+    /* custom scrollbars where webkit can be utilized */
+    ::-webkit-scrollbar { width: 10px; height: 10px; }
+    ::-webkit-scrollbar-thumb { background: rgba(90, 90, 90); }
+    ::-webkit-scrollbar-track { background: rgba(0, 0, 0, 0.2); }
+
+
 
 .main_content {
     margin-left: 36%; z-index: 200;
 }
 
     .main_container {
-        width: 92%; max-width: 790px; margin: 0; float: left;
+        width: 94%; max-width: 790px; margin: 0;
     }
 
     .sub-section { padding-top: 40px; }
@@ -139,6 +153,17 @@ code    { padding: 3px 6px; background-color: #222; color: #ddd; }
 /* spacers and helpers */
 
 .clear { clear: both; }
+.notopmargin        { margin-top: 0; }
+.notoppadding       { padding-top: 0; }
+.nobottommargin     { margin-bottom: 0; }
+.nobottompadding    { padding-bottom: 0; }
+
+.paddingLeft20      { padding-left: 20px;}
+.paddingRight20     { padding-right: 20px; }
+.paddingLeft30      { padding-left: 30px;}
+.paddingRight30     { padding-right: 30px; }
+.paddingLeft40      { padding-left: 40px;}
+.paddingRight40     { padding-right: 40px; }
 
 .spacerHuge     { height: 43px; }
 .spacerLarge    { height: 23px; }
@@ -170,7 +195,71 @@ code    { padding: 3px 6px; background-color: #222; color: #ddd; }
 
 /* Responsive web design for mobile and smaller tablets */
 
-@media screen and (max-width: 845px) {
+@media screen and (max-width: 859px) {
+
+
+    #header nav#nav-bar { display: none; }
+    #header nav#nav-bar-mobile {
+        display: inherit;
+    }
+
+    #header nav     { padding-left: 0; }
+    #header nav li  { line-height: 36px; }
+
+    #header nav#nav-bar-mobile .nav_icon {
+        background-color: #fff; color: #111;
+        width: 32px; height: 32px;
+        display: inline-block;
+        vertical-align: middle;
+        background-size: 100% auto;
+    }
+    .icn_hamburger { background-image: url('images/icn-hamburger.png'); }
+    .icn_more { background-image: url('images/icn-more-2-vertical-dots.png'); }
+
+    #header nav#nav-bar-mobile .sub-menu-ul {
+        background-color: #aaa; color: #333;
+        display: block; position: fixed; top: 54px; right: 4%;
+        padding: 10px 15px;
+        z-index: 400;
+
+        display:none;
+    }
+
+    #header nav#nav-bar-mobile .sub-menu-ul li {
+        opacity: 1;
+        display: block;
+    }
+
+    .one_third { width: 100%; margin: 0; }
+    .two_third { width: 100%; margin: 0; }
+
+
+    .sticky_sidebar_nav { /* main outer wrapper of the nav sidebar, here at the top */
+
+        top: 90px; left: 0px;
+        bottom: 28%; /* you need to fix it to the outer parts or scrolling wont work */
+        width: 90%;
+
+        background-color: #000;
+        box-sizing: border-box;
+
+    }
+
+    .sticky_sidebar_nav_container {
+        max-width: inherit;
+        padding: 25px 6%;
+        float: none;
+        box-sizing: border-box;
+    }
+    .sticky_sidebar_nav_container .paddingRight20 { padding: 0; }
+
+
+    .main_content { margin-left: 0; }
+
+        .main_container {
+            width: 92%; margin: 0 auto;  max-width: inherit;
+        }
+        .main_container .paddingLeft30 { padding: 0; }
 
 
 
