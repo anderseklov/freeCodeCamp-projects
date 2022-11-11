@@ -34,6 +34,21 @@
                         <li><a href="#" class="nav-link">support</a></li>
                     </ul>
                 </nav>
+                <nav id="nav-bar-mobile">
+                    <ul>
+                        <li><i class="nav_icon icn_more"></i></li>
+
+                        <li><i class="nav_icon icn_hamburger"></i>&nbsp;&nbsp;&nbsp;sections&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+
+                            <ul class="sub-menu-ul">
+                                <li><a href="#" class="nav-link">contact</a></li>
+                                <li><a href="#" class="nav-link">support</a></li>
+                            </ul>
+
+                        </li>
+
+                    </ul>
+                </nav>
             </header>
 
             <div class="spacerHuge"></div><div class="spacerMedium"></div>
@@ -44,18 +59,24 @@
 
                     <div class="sticky_sidebar_nav_container">
 
-                        <div class="inner-padding-right-20px">
-                            <h2>Navigate contents</h2>
-                            <p>Write us a line or two about what your piano
-                                needs and we'll get back to you with our advice and solutions.
-                            </p>
+                        <div class="paddingRight20">
+                            <h2 class="notopmargin">Navigate contents</h2>
+                            <p>These docs are for demonstration purposes only, for this personal edu project.</p>
 
                             <ul>
-                                <li><strong><a href="#intro-top">ul 1 - li 1 - top</a></strong>
+                                <li><strong><a href="#intro-top">Introduction</a></strong>
                                     <ul>
-                                        <li>ul 2 - li 1 - longer text so we see it flowing</li>
-                                        <li>ul 2 - li 2</li>
+                                        <li><a href="#prerequisites">Prerequisites</a></li>
+                                        <li><a href="#intro-java-javascript">Prerequisites</a></li>
                                         <li>ul 2 - li 3</li>
+                                    </ul>
+                                </li>
+                                <li><strong><a href="#hello-world">JavaScript programming basics</a></strong>
+                                    <ul>
+                                        <li><a href="#hello-world">Hello World</a></li>
+                                        <li><a href="#variables">Variables</a></li>
+                                        <li><a href="#variable-scope">Variable Scope</a></li>
+                                        <li><a href="#global-variables">Global Variables</a></li>
                                     </ul>
                                 </li>
                             </ul>
@@ -70,8 +91,7 @@
                     <div class="main_container">
 
 
-                        <div class="inner-padding-left-20px">
-                            <div class="form-container roundedImg12">
+                        <div class="paddingLeft30">
 
                                 <section id="intro-top">
 
@@ -106,7 +126,7 @@
                                     today is <a href="https://nodejs.org/" target="_blank">NodeJS</a>, used for the majority of servers, micro-services, APIs and even desktop and mobile apps.
                                     </p>
 
-                                    <section id="intro-sub-1" class="sub-section">
+                                    <section id="prerequisites" class="sub-section">
                                         <h2>Prerequisites, things you should already know</h2>
 
                         				<p>This guide assumes you have the following basic background knowledge: </p>
@@ -116,7 +136,7 @@
                                             <li>Some programming experience. If you are new to programming, try one of the tutorials linked on the main page about JavaScript.</li>
                                         </ul>
 
-                        				<h2>JavaScript and Java</h2>
+                        				<h2 id="intro-java-javascript">JavaScript and Java</h2>
 
                                         <p>JavaScript and Java are similar in some ways but fundamentally different in some others. The JavaScript language resembles Java but does not have Java's static typing and strong type checking. JavaScript follows most Java expression syntax, naming conventions and basic control-flow constructs which was the reason why it was renamed from LiveScript to JavaScript.</p>
 
@@ -126,14 +146,12 @@
 
                                         <p>Read about <a href="https://www.educba.com/node-js-vs-java-performance/" target="_blank">performance and design differences between Java and JavaScript here</a>. (Java Virtual Machine vs NodeJS performance)</p>
 
-
-                        				<pre><code>#header h1 a { display: block; width: 300px; height: 80px; }</code></pre>
                                     </section>
 
                                 </section>
 
 
-                                <section id="programming-1">
+                                <section id="hello-world">
                                     <h2>Hello world - writing your first lines of code</h2>
 
                                     <p>In order to write and execute JavaScript code you will need a text editor and a project folder to
@@ -148,7 +166,7 @@
                                     <pre>var name = "John Doe"; <br>var alert_text = "Hello, " + name;<br>alert(alert_text);</pre>
 
 
-                                    <section id="programming-1-1" class="sub-section">
+                                    <section id="variables" class="sub-section">
                                         <h2>Variables</h2>
 
                                         <p>You use variables as symbolic names for values in your application. The names of variables, called identifiers, conform to certain rules.
@@ -190,7 +208,7 @@
                                         <div class="spacerMedium"></div>
 
 
-                                        <h3>Variable scope</h3>
+                                        <h3 id="variable-scope">Variable scope</h3>
 
                                         <p>When you declare a variable outside of any function, it is called a global variable, because it is available to any other code in the current document.
                                             When you declare a variable within a function, it is called a local variable, because it is available only within that function.
@@ -209,7 +227,7 @@
                                         <div class="spacerMedium"></div>
 
 
-                                        <h3>Global variables</h3>
+                                        <h3 id="global-variables">Global variables</h3>
 
                                         <p>Global variables are in fact properties of the global object. In web pages the global object is window,
                                             so you can set and access global variables using the window.variable syntax.</p>
@@ -249,8 +267,7 @@
 
 
 
-                            </div>
-                        </div><!-- inner-padding-left-20px -->
+                        </div><!-- paddingLeft30 -->
 
                     </div><!-- main_container -->
                 </div><!-- main_content -->
@@ -313,7 +330,7 @@
                         </ul>
                     </nav>
                     <div class="spacerSmall clear"></div>
-                    <p>Page designed for a fictional company by Anders Eklöv, as an assignemnt in freCodeCamp.org's course "Responsive Web Design".</a>
+                    <p>Designed by Anders Eklöv, as a technical documentation page design assignemnt in freCodeCamp.org's course "Responsive Web Design". </a>
                     </p>
                 </div>
             </section>
