@@ -1,0 +1,323 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+    <head>
+        <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <!-- without the viewport setting initial-scale=1 css media queries do not work as intended -->
+
+        <title>Documentation & Wiki Page Project - by Anders Eklöv</title>
+        <!-- for these projects I omitted the SEO meta tags and lots of other tags used to optimize loading -->
+
+        <!-- preconnects for speed -->
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+        <!-- custom Google Fonts -->
+        <link href="https://fonts.googleapis.com/css2?family=Mulish:wght@300;700&display=swap" rel="stylesheet">
+
+        <link rel="stylesheet" href="styles.css">
+    </head>
+    <body class="linearGradientBg">
+
+        <main id="main">
+
+            <header id="header">
+                <div class="logo-div">
+                    <img
+                      srcset="images/logo-1x.jpg, images/logo-2x.jpg 2x"
+                      src="images/logo-2x.jpg"
+                      alt="logo of the company" id="header-img" />
+                </div>
+                <nav id="nav-bar">
+                    <ul>
+                        <li><a href="#" class="nav-link">contact</a></li>
+                        <li><a href="#" class="nav-link">support</a></li>
+                    </ul>
+                </nav>
+            </header>
+
+            <div class="spacerHuge"></div><div class="spacerMedium"></div>
+
+
+
+                <div class="one_third sticky_sidebar_nav">
+
+                    <div class="sticky_sidebar_nav_container">
+
+                        <div class="inner-padding-right-20px">
+                            <h2>Navigate contents</h2>
+                            <p>Write us a line or two about what your piano
+                                needs and we'll get back to you with our advice and solutions.
+                            </p>
+
+                            <ul>
+                                <li><strong><a href="#intro-top">ul 1 - li 1 - top</a></strong>
+                                    <ul>
+                                        <li>ul 2 - li 1 - longer text so we see it flowing</li>
+                                        <li>ul 2 - li 2</li>
+                                        <li>ul 2 - li 3</li>
+                                    </ul>
+                                </li>
+                            </ul>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+                <div class="two_third main_content">
+                    <div class="main_container">
+
+
+                        <div class="inner-padding-left-20px">
+                            <div class="form-container roundedImg12">
+
+                                <section id="intro-top">
+
+                                    <h1 id="title">Introduction to JavaScript</h1>
+
+                                    <p class="lead">JavaScript is a cross-platform, object-oriented scripting language. It is a small
+                                        and lightweight language. Inside a host environment (for example, a web browser), JavaScript
+                                        can be connected to the objects of its environment to provide programmatic control over them.
+                                        JavaScript contains a standard library of objects, such as Array, Date, and Math, and a core
+                                        set of language elements such as operators, control structures, and statements.
+                                    </p>
+
+                                    <p>Core JavaScript can be extended for a variety of purposes by supplementing it with additional objects; for example:</p>
+
+                                    <ul>
+                                        <li>
+                                            Client-side JavaScript extends the core language by supplying objects to control a browser and its Document Object Model (DOM).
+                                            For example, client-side extensions allow an application to place elements on an HTML form and respond to user events such as
+                                            mouse clicks, form input, and page navigation.
+                                        </li>
+                                        <li>
+                                            Server-side JavaScript extends the core language by supplying objects relevant to running JavaScript on a server. For example,
+                                            server-side extensions allow an application to communicate with a database, provide continuity of information from one invocation
+                                            to another of the application, or perform file manipulations on a server.
+                                        </li>
+                                    </ul>
+
+                                    <h2>Servers, shells and environments</h2>
+
+                                    <p>JavaScript can also run inside of a shell in your operating system. For instance, macOS comes with a integrated JavaScript shell,
+                                    called <code>jsc</code>. On Linux there are similar ones, such as rhino. But the most usual interactive shell and back-end JavaScript tool
+                                    today is <a href="https://nodejs.org/" target="_blank">NodeJS</a>, used for the majority of servers, micro-services, APIs and even desktop and mobile apps.
+                                    </p>
+
+                                    <section id="intro-sub-1" class="sub-section">
+                                        <h2>Prerequisites, things you should already know</h2>
+
+                        				<p>This guide assumes you have the following basic background knowledge: </p>
+                                        <ul>
+                                            <li>A general understanding of the Internet and the World Wide Web (WWW).</li>
+                                            <li>Good working knowledge of HyperText Markup Language (HTML).</li>
+                                            <li>Some programming experience. If you are new to programming, try one of the tutorials linked on the main page about JavaScript.</li>
+                                        </ul>
+
+                        				<h2>JavaScript and Java</h2>
+
+                                        <p>JavaScript and Java are similar in some ways but fundamentally different in some others. The JavaScript language resembles Java but does not have Java's static typing and strong type checking. JavaScript follows most Java expression syntax, naming conventions and basic control-flow constructs which was the reason why it was renamed from LiveScript to JavaScript.</p>
+
+                                        <p>In contrast to Java's compile-time system of classes built by declarations, JavaScript supports a runtime system based on a small number of data types representing numeric, Boolean, and string values. JavaScript has a prototype-based object model instead of the more common class-based object model. The prototype-based model provides dynamic inheritance; that is, what is inherited can vary for individual objects. JavaScript also supports functions without any special declarative requirements. Functions can be properties of objects, executing as loosely typed methods.</p>
+
+                                        <p>JavaScript is a very free-form language compared to Java. You do not have to declare all variables, classes, and methods. You do not have to be concerned with whether methods are public, private, or protected, and you do not have to implement interfaces. Variables, parameters, and function return types are not explicitly typed.</p>
+
+                                        <p>Read about <a href="https://www.educba.com/node-js-vs-java-performance/" target="_blank">performance and design differences between Java and JavaScript here</a>. (Java Virtual Machine vs NodeJS performance)</p>
+
+
+                        				<pre><code>#header h1 a { display: block; width: 300px; height: 80px; }</code></pre>
+                                    </section>
+
+                                </section>
+
+
+                                <section id="programming-1">
+                                    <h2>Hello world - writing your first lines of code</h2>
+
+                                    <p>In order to write and execute JavaScript code you will need a text editor and a project folder to
+                                        put files related to your furst coding project in. You can alternatively use an online educational environment
+                                        such as <a href="https://codepen.io/" target="_blank">codepen</a> or <a href="https://jsfiddle.net/" target="_blank">jsfiddle</a>.
+                                        Therse are the easiest sites to get started writing your first pieces of JavaScript.
+                                    </p>
+
+                                    <p>In your first JavaScript document (your-file.js) or if you are using JSFiddle.net
+                                        (<em>make sure you use the setting 'JavaScript + No-Library (pure JS)'</em>), write these two simple lines and press 'run' (or save and refresh your browser):
+                                    </p>
+                                    <pre>var name = "John Doe"; <br>var alert_text = "Hello, " + name;<br>alert(alert_text);</pre>
+
+
+                                    <section id="programming-1-1" class="sub-section">
+                                        <h2>Variables</h2>
+
+                                        <p>You use variables as symbolic names for values in your application. The names of variables, called identifiers, conform to certain rules.
+                                        </p>
+                                        <p>A JavaScript identifier must start with a letter, underscore (_), or dollar sign ($); subsequent characters can also be digits (0-9).
+                                            Because JavaScript is case sensitive, letters include the characters "A" through "Z" (uppercase) and the characters "a" through "z"
+                                            (lowercase).
+                                        </p>
+
+                                        <p>You can use ISO 8859-1 or Unicode letters such as å and ü in identifiers. You can also use the Unicode escape sequences as characters
+                                            in identifiers. Some examples of legal names are Number_hits, temp99, and _name.</p>
+
+                                        <p>In your first JavaScript document (your-file.js) or if you are using JSFiddle.net
+                                            (<em>make sure you use the setting 'JavaScript + No-Library (pure JS)'</em>), write these two simple lines and press 'run' (or save and refresh your browser):
+                                        </p>
+
+
+                                        <h3>Declaring variables</h3>
+
+                                        <p>You can declare a variable in three ways:
+                                            <br><br>
+                                            With the keyword var. For example,
+                                        </p>
+
+                                        <pre>var x = 42;</pre>
+
+                                        <p>This syntax can be used to declare both local and global variables.</p>
+                                        <p>By simply assigning it a value. For example,</p>
+
+                                        <pre>x = 42;</pre>
+
+                                        <p>This always declares a global variable. It generates a strict JavaScript warning. You shouldn't use this variant.</p>
+                                        <p>With the keyword let. For example,</p>
+
+                                        <pre>let y = 13.</pre>
+
+                                        <p>This syntax can be used to declare a block scope local variable. See Variable scope below.</p>
+
+                                        <div class="spacerMedium"></div>
+
+
+                                        <h3>Variable scope</h3>
+
+                                        <p>When you declare a variable outside of any function, it is called a global variable, because it is available to any other code in the current document.
+                                            When you declare a variable within a function, it is called a local variable, because it is available only within that function.
+                                        </p>
+
+                                        <p>JavaScript before ECMAScript 2015 does not have block statement scope; rather, a variable declared within a block is local to the function (or global scope)
+                                            that the block resides within. For example the following code will log 5, because the scope of x is the function (or global context) within which x is declared,
+                                            not the block, which in this case is an if statement.</p>
+
+                                        <pre>if (true) { var x = 5; } console.log(x); // 5</pre>
+
+                                        <p>This behavior changes, when using the let declaration introduced in ECMAScript 2015, commonly referred to as ES6.</p>
+
+                                        <pre>if (true) { <br>    let y = 5; <br>} <br>console.log(y); // ReferenceError: y is not defined</pre>
+
+                                        <div class="spacerMedium"></div>
+
+
+                                        <h3>Global variables</h3>
+
+                                        <p>Global variables are in fact properties of the global object. In web pages the global object is window,
+                                            so you can set and access global variables using the window.variable syntax.</p>
+                                        <p>Consequently, you can access global variables declared in one window or frame from another window or frame by specifying the window or frame name. For example,
+                                            if a variable called phoneNumber is declared in a document, you can refer to this variable from an iframe as parent.phoneNumber.</p>
+
+                                        <div class="spacerMedium"></div>
+
+
+                                        <h3>Constants</h3>
+
+                                        <p>You can create a read-only, named constant with the const keyword. The syntax of a constant identifier is the same as for a variable identifier: it must start with a
+                                            letter, underscore or dollar sign and can contain alphabetic, numeric, or underscore characters.</p>
+
+                                        <pre>const PI = 3.14;</pre>
+
+                                        <p>A constant cannot change value through assignment or be re-declared while the script is running. It has to be initialized to a value.</p>
+                                        <p>The scope rules for constants are the same as those for let block scope variables. If the const keyword is omitted, the identifier is assumed to represent a variable.</p>
+                                        <p>You cannot declare a constant with the same name as a function or variable in the same scope. For example:</p>
+
+                                        <pre>// THIS WILL CAUSE AN ERROR <br>function f() {}; <br><br>const f = 5; // THIS WILL CAUSE AN ERROR ALSO <br><br>function f() { <br>    const g = 5; <br>    var g; // statements <br>} </pre>
+
+
+
+
+                                    </section>
+
+
+
+                                </section>
+
+
+
+
+
+
+
+
+
+                            </div>
+                        </div><!-- inner-padding-left-20px -->
+
+                    </div><!-- main_container -->
+                </div><!-- main_content -->
+
+                <div class="spacerHuge clear"></div>
+                <div class="spacerHuge"></div>
+
+
+
+            <section id="services">
+                <div class="container center">
+
+                    <p id="tagline">Overview of our services</p>
+                    <div class="flex-container">
+
+                      <div class="card">
+                          <img
+                            srcset="images/piano-repair-1x.jpg, images/piano-repair-2x.jpg 2x"
+                            src="images/piano-repair-2x.jpg"
+                            alt="reparing piano parts" class="flex-image boxShadowSmall"  />
+                          <h3>Replacing parts</h3>
+                          <p class="flex-text">Internal mechanical parts sometimes need replacements, due to wear or insensitive handling.</p>
+                      </div>
+
+                      <div class="card">
+                          <img
+                            srcset="images/piano-reconstruction-1x.jpg, images/piano-reconstruction-2x.jpg 2x"
+                            src="images/piano-reconstruction-2x.jpg"
+                            alt="restoration of piano parts" class="flex-image boxShadowSmall"  />
+                          <h3>Reconstruction</h3>
+                          <p class="flex-text">If parts do not exist on the market for older models, we can reconstruct them maually from scratch.</p>
+                      </div>
+
+                      <div class="card">
+                          <img
+                            srcset="images/piano-trimming-1x.jpg, images/piano-trimming-2x.jpg 2x"
+                            src="images/piano-trimming-2x.jpg"
+                            alt="tuning and trimming of piano parts" class="flex-image boxShadowSmall"  />
+
+                          <h3>Tuning & Trimming</h3>
+                          <p class="flex-text">Sometimes all it takes is a few tune-ups of functioning parts to make the machinery fleurish once more.</p>
+                      </div>
+
+                    </div>
+
+                    <div class="spacerHuge clear"></div>
+                    <div class="spacerLarge"></div>
+
+                </div>
+            </section>
+
+            <section id="footer" class="center">
+                <div class="container">
+                    <div class="spacerMedium clear"></div>
+                    <nav id="footer-nav">
+                        <ul>
+                            <li><a href="#">terms & privacy</a></li>
+                            <li><a href="#about">about</a></li>
+                            <li><a href="#contact">contact</a></li>
+                        </ul>
+                    </nav>
+                    <div class="spacerSmall clear"></div>
+                    <p>Page designed for a fictional company by Anders Eklöv, as an assignemnt in freCodeCamp.org's course "Responsive Web Design".</a>
+                    </p>
+                </div>
+            </section>
+
+        </main>
+    </body>
+</html>
