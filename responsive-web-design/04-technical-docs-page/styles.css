@@ -199,10 +199,10 @@ code { padding: 3px 6px; background-color: #222; color: #ddd; }
 }
 
 .linearGradientBg {
-    background: #405db4;
-    background: linear-gradient(30deg,#405db4 0%, #470092 80%);
-    background: -webkit-linear-gradient(20deg,#405db4 0%, #470092 80%);
-    background: -moz-linear-gradient(20deg,#405db4 0%, #470092 80%);
+    background: #150a46;
+    background: linear-gradient(30deg,#150a46 0%, #231b2a 80%);
+    background: -webkit-linear-gradient(30deg,#150a46 0%, #231b2a 80%);
+    background: -moz-linear-gradient(30deg,#150a46 0%, #231b2a 80%);
 }
 
 
@@ -211,12 +211,15 @@ code { padding: 3px 6px; background-color: #222; color: #ddd; }
 @media screen and (max-width: 859px) {
 
 
+    #header { margin-left: 0; margin-right: 0; padding: 10px 4% 10px 4%; }
+    #header .logo-div { margin-left: 0; }
+
     #header nav#nav-bar { display: none; }
     #header nav#nav-bar-mobile {
         display: inherit;
     }
 
-    #header nav     { padding-left: 0; }
+    #header nav     { padding-left: 0; padding-right: 0; }
     #header nav li  { line-height: 36px; }
 
     #header nav#nav-bar-mobile .nav_icon {
@@ -246,12 +249,12 @@ code { padding: 3px 6px; background-color: #222; color: #ddd; }
         opacity: 0;
         height: 0;
     }
+    #sub-menu-mobile { overflow: hidden; }  /* required or items in list are clickable even it menu is hidden */
     #sub-menu-mobile.show, #sidebar_nav.show {
         transition: opacity 1s ease-out;
         opacity: 1;
         height: auto;
     }
-
 
 
     #header nav#nav-bar-mobile .sub-menu-ul li {
@@ -261,7 +264,6 @@ code { padding: 3px 6px; background-color: #222; color: #ddd; }
 
     .one_third { width: 100%; margin: 0; }
     .two_third { width: 100%; margin: 0; }
-
 
     .sticky_sidebar_nav { /* main outer wrapper of the nav sidebar, here at the top */
 
@@ -281,19 +283,12 @@ code { padding: 3px 6px; background-color: #222; color: #ddd; }
     }
     .sticky_sidebar_nav_container .paddingRight20 { padding: 0; }
 
-
     .main_content { margin-left: 0; }
 
-        .main_container {
-            width: 92%; margin: 0 auto;  max-width: inherit;
-        }
-        .main_container .paddingLeft30 { padding: 0; }
-
-
-}
-
-@media screen and (max-width: 720px) {
-
+    .main_container {
+        width: 92%; margin: 0 auto;  max-width: inherit;
+    }
+    .main_container .paddingLeft30 { padding: 0; }
 
 
 }
