@@ -55,7 +55,7 @@ section { width: 100%; clear: both; }
 }
 
 #header .logo-div {
-    width: 136px; height: 39px; margin-left: 25px;
+    width: 136px; height: 39px; margin-left: 25px; margin-top: 2px;
     float: left;
     z-index: 500;
 }
@@ -67,6 +67,8 @@ section { width: 100%; clear: both; }
 
 #header nav li { margin: 0; line-height: 34px; display: inline-block; float: right; }
 #header nav li a { padding: 5px 10px; text-decoration: none; }
+
+#sub-menu-mobile { display: none; }
 
 #footer nav, #footer nav li, #footer nav li a {
     padding-left: 7px; padding-right: 7px;
@@ -123,20 +125,17 @@ section { width: 100%; clear: both; }
 }
 
 .code-wrapper {
-    padding: 20px 22px;
+    padding: 20px 20px;
     background-color: #222; color: #ddd;
     border: 1px solid #444; border-radius: 11px;
 }
 
 .code-wrapper pre {
     overflow-x: scroll;
-    margin: 0; padding: 0 0 13px; border: none; 
+    margin: 0; padding: 0 0 13px; border: none;
 }
 
-pre {
-
-    background-color: #222; color: #ddd; border: 1px solid #444; border-radius: 11px; }
-code    { padding: 3px 6px; background-color: #222; color: #ddd; }
+code { padding: 3px 6px; background-color: #222; color: #ddd; }
 
 .one_third img { margin-top: 30px; }
 
@@ -165,7 +164,8 @@ code    { padding: 3px 6px; background-color: #222; color: #ddd; }
 
 /* spacers and helpers */
 
-.clear { clear: both; }
+.pointer            { cursor: pointer; }
+.clear              { clear: both; }
 .notopmargin        { margin-top: 0; }
 .notoppadding       { padding-top: 0; }
 .nobottommargin     { margin-bottom: 0; }
@@ -220,23 +220,39 @@ code    { padding: 3px 6px; background-color: #222; color: #ddd; }
     #header nav li  { line-height: 36px; }
 
     #header nav#nav-bar-mobile .nav_icon {
-        background-color: #fff; color: #111;
+        color: #111;
         width: 32px; height: 32px;
         display: inline-block;
         vertical-align: middle;
         background-size: 100% auto;
     }
-    .icn_hamburger { background-image: url('images/icn-hamburger.png'); }
-    .icn_more { background-image: url('images/icn-more-2-vertical-dots.png'); }
+    .icn_hamburger { background-image: url('images/icn-menu-list.png'); }
+    .icn_more { background-image: url('images/icn-more-2-circle-egen.png'); }
+
+    #nav-bar-mobile li { font-size: 1.09em; }
 
     #header nav#nav-bar-mobile .sub-menu-ul {
         background-color: #aaa; color: #333;
         display: block; position: fixed; top: 54px; right: 4%;
         padding: 10px 15px;
         z-index: 400;
-
-        display:none;
     }
+
+
+    /* for both sub-menu in top menu and the sidebar menu on mobile */
+
+    #sub-menu-mobile, #sidebar_nav {
+        transition: opacity 1s ease-out;
+        opacity: 0;
+        height: 0;
+    }
+    #sub-menu-mobile.show, #sidebar_nav.show {
+        transition: opacity 1s ease-out;
+        opacity: 1;
+        height: auto;
+    }
+
+
 
     #header nav#nav-bar-mobile .sub-menu-ul li {
         opacity: 1;
@@ -249,13 +265,12 @@ code    { padding: 3px 6px; background-color: #222; color: #ddd; }
 
     .sticky_sidebar_nav { /* main outer wrapper of the nav sidebar, here at the top */
 
-        top: 90px; left: 0px;
+        top: 61px; left: 0px;
         bottom: 28%; /* you need to fix it to the outer parts or scrolling wont work */
         width: 90%;
 
         background-color: #000;
         box-sizing: border-box;
-
     }
 
     .sticky_sidebar_nav_container {
@@ -273,7 +288,6 @@ code    { padding: 3px 6px; background-color: #222; color: #ddd; }
             width: 92%; margin: 0 auto;  max-width: inherit;
         }
         .main_container .paddingLeft30 { padding: 0; }
-
 
 
 }
